@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# This is the initialization for Mac OSX
-
 # Check environment automatically for Installing Homebrew
     xcode-select --install
     # TODO search how to download them automatically
@@ -43,12 +41,21 @@
 # https://caskroom.github.io/
     brew install brew-cask
 
+# http://rcmdnk.github.io/blog/2016/02/13/computer-mac/
+    brew install mas
+
 # http://blog.glidenote.com/blog/2013/02/28/the-silver-searcher-better-than-ack/
     brew install ag
     # TODO check Bundle 'rking/ag.vim'
 
+# http://gitpub.hatenablog.com/entry/2014/01/14/215659
+    brew install htop
+
 # http://tech.basicinc.jp/JavaScript/2013/05/17/json_jq/
     brew install jq
+
+# http://qiita.com/n-yamanaka/items/3268cdd2179d31a93ee3
+    brew install libyaml
 
 # http://qiita.com/massa142/items/ef39b9192c0955720f8d
     brew install nkf
@@ -73,15 +80,6 @@
     brew install git
     brew install gist
 
-# http://gitpub.hatenablog.com/entry/2014/01/14/215659
-    brew install htop
-
-# http://qiita.com/n-yamanaka/items/3268cdd2179d31a93ee3
-    brew install libyaml
-
-# http://rcmdnk.github.io/blog/2016/02/13/computer-mac/
-    brew install mas
-
 # http://qiita.com/vintersnow/items/be4b29652ff665c45198
 # http://qiita.com/upinetree/items/cd80bc7865c52091be10
     brew install tmux
@@ -92,75 +90,3 @@
 
 # http://scribble.washo3.com/mac/homebrew-install-gui-wireshark.html
     brew linkapps
-
-# Install Environment
-# anyenv
-# mysql
-# jenkins
-# http://qiita.com/imura81gt/items/860ac6196e571c17b7e1
-# http://qiita.com/muran001/items/409b8cb42cca02b147a0#tmuxを入れてクリップボード共有もついでにやっておく
-
-# Install Applications using cask
-    brew cask install virtualbox
-    brew cask install alfred
-    brew cask install astah-community
-    brew cask install avast
-    brew cask install blender
-    brew cask install clipmenu
-    brew cask install cyberduck
-    brew cask install docker
-    brew cask install doxygen
-    brew cask install dropbox
-    brew cask install eclipse-ide
-    brew cask install evernote
-    brew cask install genymotion
-    brew cask install google-chrome
-    brew cask install google-drive
-    brew cask install google-japanese-ime
-    brew cask install iterm2
-    brew cask install mysqlworkbench
-    brew cask install shiftit
-    brew cask install skype
-    brew cask install sourcetree
-    brew cask install teamviewer
-    brew cask install thunderbird
-    brew cask install totalspaces
-    brew cask install unity
-    brew cask install visual-studio-code
-    brew cask install wireshark
-
-# Cleanup .dmg
-    brew cask cleanup
-
-# Install Applications using mas fron AppStore
-# Alfred (1.2)
-    mas install 405843582
-# GarageBand (10.1.3)
-    mas install 682658836
-# Evernote (6.10)
-    mas install 406056744
-# LINE (4.10.2)
-    mas install 539883307
-# SpeakLine (3.1.4)
-    mas install 441968334
-# The Unarchiver (3.11.1)
-    mas install 425424353
-# Slack (2.3.2)
-    mas install 803453959
-
-# link
-# brew-caskのappをalfredで探せるようにする
-    brew cask alfred link
-
-# font
-# http://qiita.com/muran001/items/409b8cb42cca02b147a0#tmuxを入れてクリップボード共有もついでにやっておく
-
-# Clean old version Packages
-    brew cleanup
-
-# http://qiita.com/upinetree/items/cd80bc7865c52091be10
-# .tmux.conf
-# set-option -g default-command "reattach-to-user-namespace -l bash"
-
-# git config --global user.name "4885rhkA"
-# git config --global user.email "sun.moon.bow.reverse7@gmail.com"
