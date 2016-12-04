@@ -18,6 +18,9 @@ echo "alias rm='rmtrash'" >> .bashrc
 source .bash_profile
 source .bashrc
 
+git config --global user.name $1
+git config --global user.email $2
+
 # font
 # http://qiita.com/muran001/items/409b8cb42cca02b147a0#tmuxを入れてクリップボード共有もついでにやっておく
 
@@ -25,8 +28,6 @@ source .bashrc
 # .tmux.conf
 # set-option -g default-command "reattach-to-user-namespace -l bash"
 
-# git config --global user.name "4885rhkA"
-# git config --global user.email "sun.moon.bow.reverse7@gmail.com"
 
 # Install Environment
 # mysql

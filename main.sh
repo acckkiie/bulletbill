@@ -29,4 +29,4 @@ fi
 ./installanyenv.sh
 
 # Set configration
-./setbash.sh
+./setbash.sh $1 $2
