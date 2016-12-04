@@ -4,7 +4,7 @@ cd ~
 
 # Check bash files
 if [ -f .bash_profile ]; then
-    echo "Use exisiting .bash_profile"
+    echo "Use existed .bash_profile"
 else
     touch .bash_profile
     chmod 644 .bash_profile
@@ -12,7 +12,7 @@ else
 fi
 
 if [ -f .bashrc ]; then
-    echo "Use exisiting .bashrc" 
+    echo "Use existed .bashrc" 
 else
     touch .bashrc
     chmod 644 .bashrc

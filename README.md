@@ -19,7 +19,7 @@ Execute
     ```
     git clone https://github.com/4885rhkA/init
     cd /path/to/cloned-folder
-    ./main.sh your_git_username your_git_password
+    ./main.sh your_git_username your_git_email
     ```
 + Set config for each applications
   * Alfred
