@@ -2,7 +2,6 @@
 
 # Check environment automatically for Installing Homebrew
     xcode-select --install
-    # TODO search how to download them automatically
 
 # Install Homebrew
 # http://qiita.com/oooaoii/items/c14922eede6a83a750da
@@ -32,11 +31,16 @@
     brew install gzip
 
 # http://klabgames.tech.blog.jp.klab.com/archives/1047107113.html
+    if [ -d /usr/local/include ]; then
+        echo "Use existed /usr/local/include" 
+    else
+        mkdir /usr/local/include
+        chmod 755 /usr/local/include
+        echo "Created /usr/local/include"
+    fi
     brew install autoconf
     brew install automake
     brew install libtool
-    # TODO http://kopan580.hatenadiary.com/entry/2016/01/30/
-    # try to link /usr/local/include, but folder not foundを避ける
 
 # https://caskroom.github.io/
     brew install brew-cask
@@ -46,7 +50,6 @@
 
 # http://blog.glidenote.com/blog/2013/02/28/the-silver-searcher-better-than-ack/
     brew install ag
-    # TODO check Bundle 'rking/ag.vim'
 
 # http://gitpub.hatenablog.com/entry/2014/01/14/215659
     brew install htop
