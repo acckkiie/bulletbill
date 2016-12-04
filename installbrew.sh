@@ -8,7 +8,7 @@
 # http://qiita.com/oooaoii/items/c14922eede6a83a750da
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Add Repository
+# Add repository
     brew tap homebrew/versions
     brew tap homebrew/binary
     brew tap homebrew/dupes
@@ -16,7 +16,7 @@
     brew tap caskroom/versions
     brew tap peco/peco
 
-# Install Packages
+# Install packages
 # http://qiita.com/takamario/items/982ddc85a6a924516301
     brew install bash-completion
 

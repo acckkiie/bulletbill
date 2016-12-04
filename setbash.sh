@@ -2,9 +2,8 @@
 
 # .bash_profile setting
 # http://qiita.com/eumesy/items/3bb39fc783c8d4863c5f#coreutils-用に特別な-path-を通す理由
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    echo ". \$(brew --prefix)/etc/bash_completion" >> .bash_profile
-fi
+echo ". \$(brew --prefix)/etc/bash_completion" >> .bash_profile
+
 # http://d.hatena.ne.jp/katz_24/20120126/1327586474
 echo "export PATH=\$(brew --prefix coreutils)/libexec/gnubin:\$PATH" >> .bash_profile
 echo "export MANPATH=\$(brew --prefix coreutils)/libexec/gnuman:\$MANPATH" >> .bash_profile

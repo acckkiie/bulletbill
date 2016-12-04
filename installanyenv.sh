@@ -12,6 +12,7 @@
 
 # Clone files for anyenv-update
     mkdir -p $(anyenv root)/plugins
+    chmod 755 $(anyenv root)/plugins
     git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
 
 # Install environment control
