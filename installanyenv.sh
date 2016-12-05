@@ -5,7 +5,7 @@
 
 # Set .bash_profile
     echo "export PATH=\$HOME/.anyenv/bin:\$PATH" >> .bash_profile
-    echo "eval '\$(anyenv init -)'" >> .bash_profile
+    echo "eval \"\$(anyenv init -)\"" >> .bash_profile
 
 # reload
     source .bash_profile

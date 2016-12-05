@@ -5,6 +5,7 @@
 echo ". \$(brew --prefix)/etc/bash_completion" >> .bash_profile
 
 # http://d.hatena.ne.jp/katz_24/20120126/1327586474
+echo "/usr/local/bin:\$PATH" >> ~./bash_profile
 echo "export PATH=\$(brew --prefix coreutils)/libexec/gnubin:\$PATH" >> .bash_profile
 echo "export MANPATH=\$(brew --prefix coreutils)/libexec/gnuman:\$MANPATH" >> .bash_profile
 

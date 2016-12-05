@@ -13,6 +13,10 @@ Environment
 -------------------------------
 
 
+Preparation
+-------------------------------
+* Already login in Apple Store
+
 Execute
 -------------------------------
 + Execute these code  

@@ -54,6 +54,10 @@
 # http://gitpub.hatenablog.com/entry/2014/01/14/215659
     brew install htop
 
+# http://momijiame.tumblr.com/post/23166110981/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%AA%AD%E3%82%80%E3%81%AE%E3%81%AB-doxygen-graphviz-%E3%81%8C%E4%BE%BF%E5%88%A9%E3%81%AA%E4%BB%B6
+    brew install doxygen
+    brew install graphviz
+
 # http://tech.basicinc.jp/JavaScript/2013/05/17/json_jq/
     brew install jq
 

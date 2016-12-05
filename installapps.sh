@@ -28,6 +28,7 @@
     brew cask install unity
     brew cask install visual-studio-code
     brew cask install wireshark
+    brew cask install wireshark-chmodbpf
 
 # http://qiita.com/jyotti/items/48115f54ffbf6dfdf6f2
     brew cask install java7
