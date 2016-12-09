@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eu
 
 # Check environment automatically for Installing Homebrew
     xcode-select --install

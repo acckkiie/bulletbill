@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eu
 
 # Clone files for anyenv
     git clone https://github.com/riywo/anyenv ~/.anyenv

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eu
 
 # .bash_profile setting
 # http://qiita.com/eumesy/items/3bb39fc783c8d4863c5f#coreutils-用に特別な-path-を通す理由

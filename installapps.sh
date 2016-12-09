@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eu
 
 # Install Applications using cask
     brew cask install virtualbox
