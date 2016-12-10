@@ -5,7 +5,7 @@ name=$2
 email=$3
 
 # Enable to pass the everything 
-PutPasswordAutomatically() {
+PutReplyAutomatically() {
     command=$1
     password=$2
     expect -c "
@@ -69,7 +69,7 @@ done
 cat ./Brewfile | while read line
 do
     if ! echo "$line" | grep -sq "#"; then
-        PutPasswordAutomatically "brew install ${line}" $password
+        PutReplyAutomatically "brew install ${line}" $password
     fi
 done
 
@@ -83,7 +83,7 @@ brew cleanup
 cat ./Brewcaskfile | while read line
 do
     if ! echo "$line" | grep -sq "#"; then
-        PutPasswordAutomatically "brew cask install ${line}" $password
+        PutReplyAutomatically "brew cask install ${line}" $password
     fi
 done
 
@@ -98,7 +98,7 @@ brew cask cleanup
 cat ./Masfile | while read line
 do
     if ! echo "$line" | grep -sq "#"; then
-        PutPasswordAutomatically "mas install ${line}" $password
+        PutReplyAutomatically "mas install ${line}" $password
     fi
 done
 
