@@ -65,6 +65,9 @@ do
     fi
 done
 
+# http://ikm.hatenablog.jp/entry/2013/08/30/124145
+brew install expect --with-brewed-tk
+
 # Install Homebrew and commands
 cat ./Brewfile | while read line
 do

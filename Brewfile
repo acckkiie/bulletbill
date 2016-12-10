@@ -1,5 +1,3 @@
-# http://ikm.hatenablog.jp/entry/2013/08/30/124145
-expect --with-brewed-tk
 # http://qiita.com/takamario/items/982ddc85a6a924516301
 bash-completion
 # http://qiita.com/eumesy/items/3bb39fc783c8d4863c5f
