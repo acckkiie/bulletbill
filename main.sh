@@ -12,11 +12,11 @@ PutReplyAutomatically() {
         set timeout -1
         spawn $command
         expect {
-            \-regexp \"p.+d\" {
+            \-regexp \"[pP]assword\" {
                 send \"$password\r\"
             }
-            \-regexp \"f.+a\" {
-                send \"get fuga\r\"
+            \-regexp \"[yY]es.*[nN]o\" {
+                send \"yes\r\"
             }
         }
     "
