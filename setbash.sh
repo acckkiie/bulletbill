@@ -1,5 +1,7 @@
 #!/bin/bash
 set -eu
+name=$1
+email=$2
 
 # .bash_profile setting
 # http://qiita.com/eumesy/items/3bb39fc783c8d4863c5f#coreutils-用に特別な-path-を通す理由
@@ -20,8 +22,8 @@ echo "alias rm='rmtrash'" >> .bashrc
 source .bash_profile
 source .bashrc
 
-git config --global user.name $1
-git config --global user.email $2
+git config --global user.name $name
+git config --global user.email $email
 
 # font
 # http://qiita.com/muran001/items/409b8cb42cca02b147a0#tmuxを入れてクリップボード共有もついでにやっておく
@@ -29,7 +31,6 @@ git config --global user.email $2
 # http://qiita.com/upinetree/items/cd80bc7865c52091be10
 # .tmux.conf
 # set-option -g default-command "reattach-to-user-namespace -l bash"
-
 
 # Install Environment
 # mysql

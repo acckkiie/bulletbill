@@ -2,7 +2,7 @@
 set -eu
 password=$1
 name=$2
-mail=$3
+email=$3
 
 # Enable to pass the everything 
 PutPasswordAutomatically() {
