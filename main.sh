@@ -15,7 +15,7 @@ PutReplyAutomatically() {
             \-regexp \"[pP]assword\" {
                 send \"$password\r\"
             }
-            \-regexp \"[yY]es.*[nN]o\" {
+            \-regexp \"\?.*[yY](es|ES).*[nN](o|O)\" {
                 send \"yes\r\"
             }
         }
