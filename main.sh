@@ -6,24 +6,6 @@ email=$3
 
 cd ~
 
-# Check environment automatically for Installing Homebrew
-./autoreply.sh "xcode-select --install" $password
-
-# Install Homebrew
-# http://qiita.com/oooaoii/items/c14922eede6a83a750da
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Add repository
-cat ./Brewrepository | while read line
-do
-    if ! echo "$line" | grep -sq "#"; then
-        brew tap "$line"
-    fi
-done
-
-# http://ikm.hatenablog.jp/entry/2013/08/30/124145
-brew install expect --with-brewed-tk
-
 # Check bash files
 if [ -f .bash_profile ]; then
     echo "Use existed .bash_profile"
@@ -49,6 +31,21 @@ else
     ./autoreply.sh "sudo chmod 755 /usr/local/include" $password
     echo "Created /usr/local/include"
 fi
+
+# Check environment automatically for Installing Homebrew
+./autoreply.sh "xcode-select --install" $password
+
+# Install Homebrew
+# http://qiita.com/oooaoii/items/c14922eede6a83a750da
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Add repository
+cat ./Brewrepository | while read line
+do
+    if ! echo "$line" | grep -sq "#"; then
+        brew tap "$line"
+    fi
+done
 
 # Install Homebrew and commands
 cat ./Brewfile | while read line
