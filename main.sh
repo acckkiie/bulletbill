@@ -4,51 +4,7 @@ password=$1
 name=$2
 email=$3
 
-# Enable to pass the everything 
-PutReplyAutomatically() {
-    command=$1
-    password=$2
-    expect -c "
-        set timeout -1
-        spawn $command
-        expect {
-            \-regexp \"[pP]assword\" {
-                send \"$password\r\"
-            }
-            \-regexp \"\?.*[yY](es|ES).*[nN](o|O)\" {
-                send \"yes\r\"
-            }
-        }
-    "
-}
-
 cd ~
-
-# Check bash files
-if [ -f .bash_profile ]; then
-    echo "Use existed .bash_profile"
-else
-    touch .bash_profile
-    chmod 644 .bash_profile
-    echo "Created .bash_profile"
-fi
-
-if [ -f .bashrc ]; then
-    echo "Use existed .bashrc" 
-else
-    touch .bashrc
-    chmod 644 .bashrc
-    echo "Created .bashrc"
-fi
-
-# Check alerady file existed
-if [ -d /usr/local/include ]; then
-    echo "Use existed /usr/local/include" 
-else
-    mkdir /usr/local/include
-    chmod 755 /usr/local/include
-    echo "Created /usr/local/include"
-fi
 
 # Check environment automatically for Installing Homebrew
 xcode-select --install
@@ -68,11 +24,37 @@ done
 # http://ikm.hatenablog.jp/entry/2013/08/30/124145
 brew install expect --with-brewed-tk
 
+# Check bash files
+if [ -f .bash_profile ]; then
+    echo "Use existed .bash_profile"
+else
+    touch .bash_profile
+    ./autoreply.sh "sudo chmod 644 .bash_profile" $password
+    echo "Created .bash_profile"
+fi
+
+if [ -f .bashrc ]; then
+    echo "Use existed .bashrc" 
+else
+    touch .bashrc
+    ./autoreply.sh "sudo chmod 644 .bashrc" $password
+    echo "Created .bashrc"
+fi
+
+# Check alerady file existed
+if [ -d /usr/local/include ]; then
+    echo "Use existed /usr/local/include" 
+else
+    ./autoreply.sh "sudo mkdir /usr/local/include" $password
+    ./autoreply.sh "sudo chmod 755 /usr/local/include" $password
+    echo "Created /usr/local/include"
+fi
+
 # Install Homebrew and commands
 cat ./Brewfile | while read line
 do
     if ! echo "$line" | grep -sq "#"; then
-        PutReplyAutomatically "brew install ${line}" $password
+        ./autoreply.sh "brew install ${line}" $password
     fi
 done
 
@@ -86,7 +68,7 @@ brew cleanup
 cat ./Brewcaskfile | while read line
 do
     if ! echo "$line" | grep -sq "#"; then
-        PutReplyAutomatically "brew cask install ${line}" $password
+        ./autoreply.sh "brew cask install ${line}" $password
     fi
 done
 
@@ -101,7 +83,7 @@ brew cask cleanup
 cat ./Masfile | while read line
 do
     if ! echo "$line" | grep -sq "#"; then
-        PutReplyAutomatically "mas install ${line}" $password
+        ./autoreply.sh "mas install ${line}" $password
     fi
 done
 
