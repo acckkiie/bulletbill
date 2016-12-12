@@ -7,7 +7,7 @@ email=$3
 cd ~
 
 # Check environment automatically for Installing Homebrew
-xcode-select --install
+./autoreply.sh "xcode-select --install" $password
 
 # Install Homebrew
 # http://qiita.com/oooaoii/items/c14922eede6a83a750da
