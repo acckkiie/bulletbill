@@ -40,7 +40,7 @@ fi
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Add repository
-cat ./Brewrepository | while read line
+cat Brewrepository | while read line
 do
     if ! echo "$line" | grep -sq "#"; then
         brew tap "$line"
@@ -48,7 +48,7 @@ do
 done
 
 # Install Homebrew and commands
-cat ./Brewfile | while read line
+cat Brewfile | while read line
 do
     if ! echo "$line" | grep -sq "#"; then
         ./autoreply.sh "brew install ${line}" $password
@@ -62,7 +62,7 @@ brew linkapps
 brew cleanup
 
 # Install applications by homebrew-cask
-cat ./Brewcaskfile | while read line
+cat Brewcaskfile | while read line
 do
     if ! echo "$line" | grep -sq "#"; then
         ./autoreply.sh "brew cask install ${line}" $password
@@ -77,7 +77,7 @@ brew cask alfred link
 brew cask cleanup
 
 # Install Applications using mas fron AppStore
-cat ./Masfile | while read line
+cat Masfile | while read line
 do
     if ! echo "$line" | grep -sq "#"; then
         ./autoreply.sh "mas install ${line}" $password
