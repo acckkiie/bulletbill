@@ -20,7 +20,7 @@ expect {
     "Press\ RETURN\ to\ continue\ or\ any\ other\ key\ to\ abort" {
         send "\r"
     }
-    default {
+    eof {
         exit 0
     }
 }
