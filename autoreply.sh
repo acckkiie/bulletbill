@@ -20,5 +20,8 @@ expect {
     "Press\ RETURN\ to\ continue\ or\ any\ other\ key\ to\ abort" {
         send "\r"
     }
+    default {
+        exit 0
+    }
 }
 interact
