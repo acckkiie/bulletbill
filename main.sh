@@ -32,12 +32,11 @@ else
     echo "Created /usr/local/include"
 fi
 
-# Check environment automatically for Installing Homebrew
-./autoreply.sh "xcode-select --install" $password
-
 # Install Homebrew
 # http://qiita.com/oooaoii/items/c14922eede6a83a750da
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > installhomebrew.rb
+./autoreply.sh "ruby installhomebrew.rb" $password
+rm -rf installhomebrew.rb
 
 # Add repository
 cat Brewrepository | while read line
