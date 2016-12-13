@@ -1,9 +1,9 @@
-My Auto Setting
+bulletbill
 ===============================
 
 About
 -------------------------------
-This is the program for setting them automatically for me
+This is the program for setting them automatically for OSX
 + Install commands
 + Install applications
 + Setting shell
@@ -22,7 +22,8 @@ Execute
 + Execute these code  
     ```
     git clone https://github.com/4885rhkA/bulletbill
-    bulletbill/main.sh
+    cd bulletbill
+    ./main.sh
     ```
 + Set config for each applications
   * Alfred
