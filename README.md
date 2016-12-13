@@ -11,7 +11,7 @@ Moreover, we need to set config for each applications
 
 Environment
 -------------------------------
-
+* OSX
 
 Preparation
 -------------------------------
@@ -21,10 +21,10 @@ Execute
 -------------------------------
 + Execute these code  
     ```
-    git clone https://github.com/4885rhkA/init
-    cd /path/to/cloned-folder
-    ./main.sh your_git_username your_git_email
+    git clone https://github.com/4885rhkA/bulletbill
+    bulletbill/main.sh
     ```
 + Set config for each applications
   * Alfred
+    * Set Accessbility
     *  Change the range for showing candidates list
