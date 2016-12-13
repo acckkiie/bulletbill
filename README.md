@@ -21,7 +21,7 @@ Execute
 -------------------------------
 + Execute these code  
     ```
-    git clone https://github.com/4885rhkA/bulletbill bulletbill
+    git clone https://github.com/4885rhkA/bulletbill
     bulletbill/main.sh
     ```
 + Set config for each applications

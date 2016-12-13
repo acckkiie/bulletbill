@@ -4,7 +4,7 @@ set -eu
 echo -n "Password:"
 read -rs password
 echo
-echo -n "\nGit Name:"
+echo -n "Git Name:"
 read -r name
 echo -n "Git Email:"
 read -r email
