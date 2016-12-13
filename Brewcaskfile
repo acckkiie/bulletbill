@@ -3,7 +3,6 @@ virtualbox-extension-pack
 alfred
 astah-community
 avast
-blender
 clipmenu
 cyberduck
 docker
@@ -23,9 +22,7 @@ sourcetree
 teamviewer
 thunderbird
 totalspaces
-unity
 visual-studio-code
-wireshark
 wireshark-chmodbpf
 # http://qiita.com/jyotti/items/48115f54ffbf6dfdf6f2
 java7

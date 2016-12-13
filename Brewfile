@@ -14,8 +14,6 @@ gzip
 autoconf
 automake
 libtool
-# https://caskroom.github.io/
-brew-cask
 # http://rcmdnk.github.io/blog/2016/02/13/computer-mac/
 mas
 # http://blog.glidenote.com/blog/2013/02/28/the-silver-searcher-better-than-ack/
@@ -51,3 +49,5 @@ tmux
 reattach-to-user-namespace
 # http://qiita.com/okamos/items/c97970ab34ff55ff3167
 vim
+# http://scribble.washo3.com/mac/homebrew-install-gui-wireshark.html
+wireshark --with-qt
