@@ -42,9 +42,9 @@ fi
 
 # Install Homebrew
 # http://qiita.com/oooaoii/items/c14922eede6a83a750da
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > ./installhomebrew.rb
-./autoreply.sh "ruby ./installhomebrew.rb" $password
-rm -rf ./installhomebrew.rb
+curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > installhomebrew.rb
+./autoreply.sh "ruby installhomebrew.rb" $password
+rm -rf installhomebrew.rb
 
 # Add repository
 cat Brewrepository | while read line
@@ -88,8 +88,9 @@ do
     fi
 done
 
+# Set configration
+./setbash.sh $gitname $gitemail
+
 # Install anyenv
 ./installanyenv.sh
 
-# Set configration
-./setbash.sh $gitname $gitemail

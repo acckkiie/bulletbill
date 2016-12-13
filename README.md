@@ -13,10 +13,6 @@ Environment
 -------------------------------
 * OSX
 
-Preparation
--------------------------------
-* Already login in Apple Store
-
 Execute
 -------------------------------
 + Execute these code  
@@ -25,7 +21,3 @@ Execute
     cd bulletbill
     ./main.sh
     ```
-+ Set config for each applications
-  * Alfred
-    * Set Accessbility
-    *  Change the range for showing candidates list

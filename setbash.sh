@@ -3,10 +3,6 @@ set -eu
 gitname=$1
 gitemail=$2
 
-# .bash_profile setting
-# http://qiita.com/eumesy/items/3bb39fc783c8d4863c5f#coreutils-用に特別な-path-を通す理由
-echo ". \$(brew --prefix)/etc/bash_completion" >> ~/.bash_profile
-
 # http://d.hatena.ne.jp/katz_24/20120126/1327586474
 echo "/usr/local/bin:\$PATH" >> ~./bash_profile
 echo "export PATH=\$(brew --prefix coreutils)/libexec/gnubin:\$PATH" >> ~/.bash_profile
