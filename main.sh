@@ -1,13 +1,18 @@
 #!/bin/bash
 set -eu
 
-echo -n "Password:"
+echo -n "Git Name:"
+read -r gitname
+echo -n "Git Email:"
+read -r gitemail
+echo -n "AppStore Account:"
+read -r appaccount
+echo -n "AppStore Password:"
+read -rs apppassword
+echo
+echo -n "PC Password:"
 read -rs password
 echo
-echo -n "Git Name:"
-read -r name
-echo -n "Git Email:"
-read -r email
 
 # Check bash files
 if [ -f ~/.bash_profile ]; then
@@ -75,6 +80,7 @@ done
 brew cask cleanup
 
 # Install Applications using mas fron AppStore
+./autoreply.sh "mas signin ${appaccount}" $apppassword
 cat Masfile | while read line
 do
     if ! echo "$line" | grep -sq "#"; then
@@ -86,4 +92,4 @@ done
 ./installanyenv.sh
 
 # Set configration
-./setbash.sh $name $mail
+./setbash.sh $gitname $gitemail

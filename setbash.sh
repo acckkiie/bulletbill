@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
-name=$1
-email=$2
+gitname=$1
+gitemail=$2
 
 # .bash_profile setting
 # http://qiita.com/eumesy/items/3bb39fc783c8d4863c5f#coreutils-用に特別な-path-を通す理由
@@ -22,10 +22,8 @@ echo "alias rm='rmtrash'" >> ~/.bashrc
 source ~/.bash_profile
 source ~/.bashrc
 
-git config --global user.name $name
-git config --global user.email $email
-
-# alfred アクセシビリティ
+git config --global user.name $gitname
+git config --global user.email $gitemail
 
 # font
 # http://qiita.com/muran001/items/409b8cb42cca02b147a0#tmuxを入れてクリップボード共有もついでにやっておく
