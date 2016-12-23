@@ -2,10 +2,11 @@
 set -eu
 gitname=$1
 gitemail=$2
+password=$3
 
 # http://qiita.com/key-amb/items/d053ed80590697435650
-./autoreply.sh "echo '/usr/local/bin/bash' | sudo tee -a /etc/shells"
-chsh -s /usr/local/bin/bash
+./autoreply.sh "sudo sh -c \"echo '/usr/local/bin/bash' >> /etc/shells\"" $password
+./autoreply.sh "chsh -s /usr/local/bin/bash" $password
 
 # bash setting
 shopt -s autocd

@@ -16,5 +16,5 @@ echo
 
 ./setfiles.sh $password
 ./setbrew.sh  $appaccount $apppassword $password
-./setbash.sh $gitname $gitemail
+./setbash.sh $gitname $gitemail $password
 ./setanyenv.sh

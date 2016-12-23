@@ -11,7 +11,7 @@ append cmdcall $pre " " $command
 
 eval $cmdcall
 expect {
-    "Password:" {
+    -regexp "Password*" {
         send "$password\r"
         exp_continue
     }
