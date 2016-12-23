@@ -1,4 +1,5 @@
 # http://qiita.com/takamario/items/982ddc85a6a924516301
+bash
 bash-completion
 # http://qiita.com/eumesy/items/3bb39fc783c8d4863c5f
 coreutils
@@ -43,6 +44,15 @@ wget
 # http://www.paka3.net/github05/
 git
 gist
+# http://itexp.hateblo.jp/entry/install-php55-with-phpenv-on-mavericks
+bison
+openssl
+re2c
+# sql
+mongodb
+mysql
+postgresql
+sqlite3
 # http://qiita.com/vintersnow/items/be4b29652ff665c45198
 # http://qiita.com/upinetree/items/cd80bc7865c52091be10
 tmux
