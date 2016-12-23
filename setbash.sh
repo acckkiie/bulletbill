@@ -47,7 +47,6 @@ git config --global user.email $gitemail
 # set-option -g default-command "reattach-to-user-namespace -l bash"
 
 # Install Environment
-# mysql
 # jenkins
 # http://qiita.com/imura81gt/items/860ac6196e571c17b7e1
 # http://qiita.com/muran001/items/409b8cb42cca02b147a0#tmuxを入れてクリップボード共有もついでにやっておく
