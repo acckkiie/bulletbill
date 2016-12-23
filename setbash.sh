@@ -8,12 +8,6 @@ password=$3
 ./autoreply.sh "sudo sh -c \"echo '/usr/local/bin/bash' >> /etc/shells\"" $password
 ./autoreply.sh "chsh -s /usr/local/bin/bash" $password
 
-# bash setting
-shopt -s autocd
-shopt -s cdspell
-shopt -s dotglob
-shopt -s extglob
-
 # http://d.hatena.ne.jp/katz_24/20120126/1327586474
 echo "export PATH=/usr/local/bin:\$PATH" >> ~./bash_profile
 echo "export PATH=\$(brew --prefix coreutils)/libexec/gnubin:\$PATH" >> ~/.bash_profile
@@ -35,6 +29,12 @@ echo "export PS1='\[\e[1;34m\][\d \t \u@\h \W]\$\[\e[0m\] '" >> ~/.bash_profile
 # reload
 source ~/.bash_profile
 source ~/.bashrc
+
+# bash setting
+shopt -s autocd
+shopt -s cdspell
+shopt -s dotglob
+shopt -s extglob
 
 git config --global user.name $gitname
 git config --global user.email $gitemail
