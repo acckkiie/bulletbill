@@ -14,7 +14,7 @@ shopt -s dotglob
 shopt -s extglob
 
 # http://d.hatena.ne.jp/katz_24/20120126/1327586474
-echo "/usr/local/bin:\$PATH" >> ~./bash_profile
+echo "export PATH=/usr/local/bin:\$PATH" >> ~./bash_profile
 echo "export PATH=\$(brew --prefix coreutils)/libexec/gnubin:\$PATH" >> ~/.bash_profile
 echo "export MANPATH=\$(brew --prefix coreutils)/libexec/gnuman:\$MANPATH" >> ~/.bash_profile
 
@@ -29,7 +29,7 @@ echo "alias tree='tree -N'" >> ~/.bashrc
 echo "source ~/.bashrc" >> ~/.bash_profile
 
 # change view of bash
-"export PS1='\[\e[1;34m\][\d \t \u@\h \W]\$\[\e[0m\] '" >> ~/.bash_profile
+echo "export PS1='\[\e[1;34m\][\d \t \u@\h \W]\$\[\e[0m\] '" >> ~/.bash_profile
 
 # reload
 source ~/.bash_profile
