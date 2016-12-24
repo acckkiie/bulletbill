@@ -9,7 +9,7 @@ password=$3
 ./autoreply.sh "chsh -s /usr/local/bin/bash" $password
 
 # http://d.hatena.ne.jp/katz_24/20120126/1327586474
-echo "export PATH=/usr/local/bin:\$PATH" >> ~./bash_profile
+echo "export PATH=/usr/local/bin:\$PATH" >> ~/.bash_profile
 echo "export PATH=\$(brew --prefix coreutils)/libexec/gnubin:\$PATH" >> ~/.bash_profile
 echo "export MANPATH=\$(brew --prefix coreutils)/libexec/gnuman:\$MANPATH" >> ~/.bash_profile
 
