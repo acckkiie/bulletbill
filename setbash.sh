@@ -37,7 +37,6 @@ set +eu
 ./autoreply.sh "sudo sh -c \"echo '/usr/local/bin/bash' >> /etc/shells\"" $password
 ./autoreply.sh "chsh -s /usr/local/bin/bash" $password
 set -eu
-/usr/local/bin/bash
 
 # reload
 source ~/.bash_profile
