@@ -19,4 +19,4 @@ echo
 ./setanyenv.sh
 ./setbash.sh $gitname $gitemail $password
 
-reboot
+./autoreply.sh "sudo reboot"

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eu
+set +eu
 gitname=$1
 gitemail=$2
 password=$3
@@ -33,13 +33,8 @@ echo "shopt -s extglob" >> ~/.bashrc
 echo "source ~/.bashrc" >> ~/.bash_profile
 
 # http://qiita.com/key-amb/items/d053ed80590697435650
-set +eu
 ./autoreply.sh "sudo sh -c \"echo '/usr/local/bin/bash' >> /etc/shells\"" $password
 ./autoreply.sh "chsh -s /usr/local/bin/bash" $password
-set -eu
-
-# reload
-source ~/.bash_profile
 
 # font
 # http://qiita.com/muran001/items/409b8cb42cca02b147a0#tmuxを入れてクリップボード共有もついでにやっておく
