@@ -8,9 +8,6 @@ password=$3
 ./autoreply.sh "sudo sh -c \"echo '/usr/local/bin/bash' >> /etc/shells\"" $password
 ./autoreply.sh "chsh -s /usr/local/bin/bash" $password
 
-# bash_completion setting
-echo "[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion" >> ~/.bash_profile
-
 # http://d.hatena.ne.jp/katz_24/20120126/1327586474
 echo "export PATH=/usr/local/bin:\$PATH" >> ~/.bash_profile
 echo "export PATH=\$(brew --prefix coreutils)/libexec/gnubin:\$PATH" >> ~/.bash_profile

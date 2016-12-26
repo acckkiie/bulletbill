@@ -1,6 +1,4 @@
-# http://qiita.com/takamario/items/982ddc85a6a924516301
 bash
-bash-completion
 # http://qiita.com/eumesy/items/3bb39fc783c8d4863c5f
 coreutils
 diffutils
