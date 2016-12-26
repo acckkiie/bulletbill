@@ -18,3 +18,5 @@ echo
 ./setbrew.sh  $appaccount $apppassword $password
 ./setbash.sh $gitname $gitemail $password
 ./setanyenv.sh
+
+reboot
