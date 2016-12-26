@@ -24,17 +24,15 @@ anyenv install ndenv
 anyenv install jenv
 anyenv install goenv
 
-# Install python environment's package control
-git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.anyenv/envs/pyenv/plugins
-pyenv rehash
-
-# Install php environment's package control
-git clone https://github.com/ngyuki/phpenv-composer.git ~/.anyenv/envs/phpenv/plugins
-phpenv rehash
+# install python environment's package control
+git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.anyenv/envs/pyenv/plugins/pyenv-virtualenv
 
 # http://qiita.com/jyotti/items/48115f54ffbf6dfdf6f2
 jenv add `/usr/libexec/java_home -v 1.7`
 jenv add `/usr/libexec/java_home -v 1.6`
 
-# Reload
+# reload
 source ~/.bash_profile
+
+# rehash
+pyenv rehash
