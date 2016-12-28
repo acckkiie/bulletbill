@@ -23,6 +23,10 @@ echo "alias awk='gawk'" >> ~/.bashrc
 echo "alias rm='rmtrash'" >> ~/.bashrc
 echo "alias tree='tree -N'" >> ~/.bashrc
 
+# git completion
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.sh
+echo "source ~/.git-completion.sh" >> ~/.bashrc
+
 # shopt setting
 echo "shopt -s autocd"  >> ~/.bashrc
 echo "shopt -s cdspell" >> ~/.bashrc
