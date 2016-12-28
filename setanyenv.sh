@@ -27,6 +27,9 @@ anyenv install goenv
 # install python environment's package control
 git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.anyenv/envs/pyenv/plugins/pyenv-virtualenv
 
+# reload
+source ~/.bash_profile
+
 # http://qiita.com/jyotti/items/48115f54ffbf6dfdf6f2
 jenv add `/usr/libexec/java_home -v 1.7`
 jenv add `/usr/libexec/java_home -v 1.6`
