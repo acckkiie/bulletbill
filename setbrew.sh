@@ -12,20 +12,24 @@ curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > i
 rm -rf installhomebrew.rb
 
 # add repository
-cat Brewrepository | while read line
+exec < Brewrepository
+while read line
 do
     if ! echo "$line" | grep -sq "#"; then
-        brew tap "$line"
+        brew tap "$line" &
     fi
 done
+wait
 
-# install Homebrew and commands
-cat Brewfile | while read line
+# install commands
+exec < Brewfile
+while read line
 do
     if ! echo "$line" | grep -sq "#"; then
-        ./autoreply.sh "brew install ${line}" $password
+        ./autoreply.sh "brew install ${line}" $password &
     fi
 done
+wait 
 
 # http://scribble.washo3.com/mac/homebrew-install-gui-wireshark.html
 brew linkapps
@@ -34,21 +38,25 @@ brew linkapps
 brew cleanup
 
 # install applications by homebrew-cask
-cat Brewcaskfile | while read line
+exec < Brewcaskfile
+while read line
 do
     if ! echo "$line" | grep -sq "#"; then
-        ./autoreply.sh "brew cask install ${line}" $password
+        ./autoreply.sh "brew cask install ${line}" $password &
     fi
 done
+wait
 
 # cleanup .dmg
 brew cask cleanup
 
 # install Applications using mas fron AppStore
 ./autoreply.sh "mas signin ${appaccount}" $apppassword
-cat Masfile | while read line
+exec < Masfile
+while read line
 do
     if ! echo "$line" | grep -sq "#"; then
-        ./autoreply.sh "mas install ${line}" $password
+        ./autoreply.sh "mas install ${line}" $password &
     fi
 done
+wait

@@ -17,12 +17,13 @@ chmod 755 $(anyenv root)/plugins
 git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
 
 # install environment control
-anyenv install rbenv
-anyenv install pyenv
-anyenv install phpenv
-anyenv install ndenv
-anyenv install jenv
-anyenv install goenv
+anyenv install rbenv &
+anyenv install pyenv &
+anyenv install phpenv &
+anyenv install ndenv &
+anyenv install jenv &
+anyenv install goenv &
+wait
 
 # install python environment's package control
 git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.anyenv/envs/pyenv/plugins/pyenv-virtualenv
@@ -30,12 +31,12 @@ git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.anyenv/envs/pyenv/plug
 # reload
 source ~/.bash_profile
 
+# rehash
+pyenv rehash
+
 # http://qiita.com/jyotti/items/48115f54ffbf6dfdf6f2
 jenv add `/usr/libexec/java_home -v 1.7`
 jenv add `/usr/libexec/java_home -v 1.6`
 
 # reload
 source ~/.bash_profile
-
-# rehash
-pyenv rehash
