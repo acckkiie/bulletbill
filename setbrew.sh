@@ -20,29 +20,24 @@ do
     fi
 done
 
-# install commands
-exec < Brewfile
-while read line
-do
-    if ! echo "$line" | grep -sq "#"; then
-        ./autoreply.sh "brew install ${line}" $password
-    fi
-done
-
-# http://scribble.washo3.com/mac/homebrew-install-gui-wireshark.html
-brew linkapps
-
-# clean old version Packages
-brew cleanup
-
-# install applications
+# install commands and applications
+brew install mas
 ./autoreply.sh "mas signin ${appaccount}" $apppassword
+{
+    exec < Brewfile
+    while read line
+    do
+        if ! echo "$line" | grep -sq "#"; then
+            ./autoreply.sh "brew install ${line}" $password
+        fi
+    done
+} &
 {
     exec < Brewcaskfile
     while read line
     do
         if ! echo "$line" | grep -sq "#"; then
-            ./autoreply.sh "brew cask install ${line}" $password &
+            ./autoreply.sh "brew cask install ${line}" $password
         fi
     done
 } &
@@ -51,11 +46,17 @@ brew cleanup
     while read line
     do
         if ! echo "$line" | grep -sq "#"; then
-            ./autoreply.sh "mas install ${line}" $password &
+            ./autoreply.sh "mas install ${line}" $password
         fi
     done
 } &
 wait
+
+# http://scribble.washo3.com/mac/homebrew-install-gui-wireshark.html
+brew linkapps
+
+# clean old version Packages
+brew cleanup
 
 # cleanup .dmg
 brew cask cleanup

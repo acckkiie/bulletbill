@@ -13,8 +13,6 @@ gzip
 autoconf
 automake
 libtool
-# http://rcmdnk.github.io/blog/2016/02/13/computer-mac/
-mas
 # http://blog.glidenote.com/blog/2013/02/28/the-silver-searcher-better-than-ack/
 ag
 # http://gitpub.hatenablog.com/entry/2014/01/14/215659
