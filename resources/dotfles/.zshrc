@@ -13,9 +13,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # asdf
 if [[ $(uname -m) == 'arm64' ]]; then
-  . /opt/homebrew/opt/asdf/libexec/asdf.sh
+    . /opt/homebrew/opt/asdf/libexec/asdf.sh
 else
-  . /usr/local/opt/asdf/libexec/asdf.sh
+    . /usr/local/opt/asdf/libexec/asdf.sh
 fi
 
 # vcs
@@ -71,6 +71,3 @@ alias diff='colordiff'
 alias ls='ls -G'
 alias tree='tree -N'
 alias history='peco-history-selection'
-
-# alias: original commands
-alias docker-compose-switch='docker stop `docker ps -a -q` && docker-compose up -d'

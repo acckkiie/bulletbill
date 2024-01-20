@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 set -eu
 
 echo -n "Git Name:"
@@ -14,9 +14,6 @@ echo -n "PC Password:"
 read -rs password
 echo
 
-./setfiles.sh $password
-./setbrew.sh  $appaccount $apppassword $password
-./setanyenv.sh
-./setbash.sh $gitname $gitemail $password
-
-./autoreply.sh "sudo reboot" $password
+shellscripts/setdotfiles.sh
+shellscripts/sethomebrew.sh $appaccount $apppassword $password
+shellscripts/setanyenv.sh
