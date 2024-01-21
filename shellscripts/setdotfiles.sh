@@ -1,6 +1,8 @@
 #!/bin/zsh
 set -eu
 
-for dotfile in resources/dotfiles/*; do
-    ln -snf "resources/dotfiles/$dotfile" "~/$dotfile"
+foldername=$(pwd)
+for dotfile in $(ls -a resources/dotfiles/.*); do
+    filename=$(basename ${dotfile})
+    ln -snf ${foldername}/resources/dotfiles/${filename} ~/${filename}
 done
