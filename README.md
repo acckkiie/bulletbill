@@ -8,7 +8,7 @@ This is the program for setting them automatically for OSX.
 - Setting shell
 
 ## Environment
-* OSX
+- OSX
 
 ## How to do
 
