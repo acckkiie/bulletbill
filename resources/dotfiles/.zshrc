@@ -11,13 +11,6 @@ zstyle ':completion:*:default' menu select=1
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# asdf
-if [[ $(uname -m) == 'arm64' ]]; then
-    . /opt/homebrew/opt/asdf/libexec/asdf.sh
-else
-    . /usr/local/opt/asdf/libexec/asdf.sh
-fi
-
 # vcs
 autoload -Uz vcs_info
 
