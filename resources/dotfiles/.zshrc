@@ -56,8 +56,8 @@ function peco-history-selection() {
     echo $CURSOR | pbcopy
 }
 
-# direnv
-eval "$(direnv hook zsh)"
+# mise
+eval "$(mise activate zsh)"
 
 # alias
 alias diff='colordiff'
