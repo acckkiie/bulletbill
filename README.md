@@ -1,23 +1,25 @@
-bulletbill
-===============================
+# bulletbill
 
-About
--------------------------------
-This is the program for setting them automatically for OSX
-+ Install commands
-+ Install applications
-+ Setting shell
-Moreover, we need to set config for each applications
+## About
 
-Environment
--------------------------------
-* OSX
+This is the program for setting them automatically for OSX.
+- Install commands
+- Install applications
+- Setting shell
 
-Execute
--------------------------------
-+ Execute these code  
+## Environment
+- OSX
+
+## How to do
+
+### Preparation
+
+- You need to login Apple Store.
+- You need to install Homrbrew.
+  - https://brew.sh/ja/
+
+### Let's do!
+- Input this command in terminal and execute.
     ```
-    git clone https://github.com/4885rhkA/bulletbill
-    cd bulletbill
     ./main.sh
     ```
