@@ -5,5 +5,5 @@ echo -n "PC Password:"
 read -rs password
 echo
 
-./shellscripts/setdotfiles.sh
+./shellscripts/installdotfiles.sh
 ./shellscripts/installpackages.sh $password

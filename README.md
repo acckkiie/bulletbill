@@ -2,10 +2,10 @@
 
 ## About
 
-This is the program for setting them automatically for OSX.
+This is the program for doing automatically for OSX.
 - Install commands
 - Install applications
-- Setting shell
+- Install dotfiles
 
 ## Environment
 - OSX
