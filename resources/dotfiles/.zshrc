@@ -61,6 +61,5 @@ eval "$(mise activate zsh)"
 
 # alias
 alias diff='colordiff'
-alias ls='ls -G'
 alias tree='tree -N'
 alias history='peco-history-selection'
