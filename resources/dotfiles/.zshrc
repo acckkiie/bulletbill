@@ -1,12 +1,12 @@
-# https://qiita.com/b4b4r07/items/8cf5d1c8b3fbfcf01a5d
-function chpwd() { ls }
-
-# compinit
+# zsh setting: compinit
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion::complete:*' use-cache true
 zstyle ':completion:*:default' menu select=1
+
+# prompt
+PROMPT="%F{green}[mollifier]%f %# "
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -14,17 +14,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # vcs
 autoload -Uz vcs_info
 
-# colors
-autoload -Uz colors
-colors
-
-# zsh setting: print_eight_bit
-setopt print_eight_bit
-
-# zsh setting: ariable reference
-setopt prompt_subst
-
-# setting prompt for git
+# prompt for git
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{red}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{blue}+"
@@ -39,7 +29,17 @@ PROMPT=$PROMPT'%{${fg[cyan]}%}[%~]%{${reset_color}%}'
 PROMPT=$PROMPT'${vcs_info_msg_0_}%{${reset_color}%}
 '
 
-# history
+# variable reference
+setopt prompt_subst
+
+# zsh setting: colors
+autoload -Uz colors
+colors
+
+# zsh setting: print_eight_bit
+setopt print_eight_bit
+
+# zsh setting: history
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -56,13 +56,17 @@ function peco-history-selection() {
     echo $CURSOR | pbcopy
 }
 
+# alias
+alias diff='colordiff'
+alias ls='ls --color=auto'
+alias tree='tree -N'
+alias history='peco-history-selection'
+
 # mise
 eval "$(mise activate zsh)"
 
-# alias
-alias diff='colordiff'
-alias tree='tree -N'
-alias history='peco-history-selection'
+# https://qiita.com/b4b4r07/items/8cf5d1c8b3fbfcf01a5d
+function chpwd() { ls }
 
 # added by Antigravity
 export PATH="~/.antigravity/antigravity/bin:$PATH"
