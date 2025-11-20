@@ -63,3 +63,9 @@ eval "$(mise activate zsh)"
 alias diff='colordiff'
 alias tree='tree -N'
 alias history='peco-history-selection'
+
+# added by Antigravity
+export PATH="~/.antigravity/antigravity/bin:$PATH"
+
+# added by BY RANCHER DESKTOP
+export PATH="~/.rd/bin:$PATH"

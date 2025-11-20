@@ -18,7 +18,7 @@ This is the program for doing automatically for OSX.
 - You need to install Homrbrew.
   - https://brew.sh/ja/
 
-### Let's do!
+### Let's start!
 - Input this command in terminal and execute.
     ```
     ./main.sh
