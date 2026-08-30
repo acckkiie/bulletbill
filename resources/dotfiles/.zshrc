@@ -63,13 +63,19 @@ alias tree='tree -N'
 alias history='peco-history-selection'
 
 # mise
+eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(mise activate zsh)"
 
 # https://qiita.com/b4b4r07/items/8cf5d1c8b3fbfcf01a5d
 function chpwd() { ls }
 
-# added by Antigravity
-export PATH="~/.antigravity/antigravity/bin:$PATH"
 
 # added by BY RANCHER DESKTOP
 export PATH="~/.rd/bin:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="~/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# Added by LM Studio CLI (lms)
+export PATH="~/.lmstudio/bin:$PATH"
